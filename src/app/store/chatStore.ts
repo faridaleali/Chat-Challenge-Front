@@ -1,4 +1,5 @@
 import { create } from "zustand";
+import { Timestamp } from "firebase/firestore";
 import {
   getFirestore,
   collection,
@@ -17,7 +18,7 @@ interface Message {
   text: string;
   uid: string;
   email: string;
-  createdAt: any;
+  createdAt: Timestamp;
 }
 
 interface ChatState {
